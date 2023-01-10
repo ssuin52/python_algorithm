@@ -11,6 +11,9 @@ def solution1(numbers):
         answer += i
     return answer
 
+# 0.01ms
+# 10.4mb
+
 print(solution1([5,8,4,0,6,7,9]))
 
 # all 리스트에 0~9까지 넣어주고 numbers에 없는 원소만 빼서 더해주자

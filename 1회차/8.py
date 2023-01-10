@@ -16,6 +16,20 @@ def solution(left, right):
             answer -= a
     return answer
 
+# 37.72ms
+# 10.3mb
+
+def solution(left, right):
+    answer = 0
+    for i in range(left,right+1):
+        if int(i**0.5)==i**0.5: # 제곱근이 있는 경우 홀수
+            answer -= i
+        else:
+            answer += i
+    return answer
+
+# 0.55ms
+# 10.4mb
 print(solution(13,17))
 print(solution(24,27))
 

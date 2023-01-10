@@ -24,6 +24,8 @@ def solution(participant, completion):
     answer = collections.Counter(participant) - collections.Counter(completion)
     return list(answer.keys())[0]
 
+# 정확성(0.6ms, 10.4mb)
+# 효율성(78.20ms, 39.mb)
 print(solution(["leo", "kiki", "eden"],["eden", "kiki"]))
 
 
@@ -41,6 +43,10 @@ def solution(participant, completion):
         temp -= hash(com)
     answer = dic[temp]
     return answer
+
+# 정확성(0.87ms, 10.4mb)
+# 효율성(53.51ms, 37.7mb)
+
 print(solution(["leo", "kiki", "eden"],["eden", "kiki"]))
 a = 'a'
 b = 'b'

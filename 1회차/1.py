@@ -10,3 +10,6 @@ def solution(arr):
 
 print(solution(arr1))
 print(solution(arr2))
+
+# 0.00ms
+# 10.3MB

@@ -12,11 +12,14 @@
 
 def solution(num):
     if num%2==0:
-        answer = '"Even"'
+        answer = "Even"
     else:
-        answer = '"Odd"'
+        answer = "Odd"
     return answer
 
 print(solution(3))
 print(solution(4))
 print(solution(0))
+
+# 0.00ms
+# 10.3mb

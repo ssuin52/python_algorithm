@@ -15,4 +15,6 @@ def solution(n):
     answer.reverse()
     return answer
 
+# 0.02ms
+# 10.4mb
 print(solution(12345))

@@ -17,17 +17,22 @@ def solution(n):
         answer += int(i)
     return answer
 
+# 0.03ms
+# 10.5mb
+
 def solution2(n):
     answer = 0
-    while n > 10:
+    while n > 0:
         a = n % 10 #나머지
-        b = n // 10 #몫
+        n = n // 10 #몫
         answer += a
-        n = b
-        if n < 10:
-            return answer+n
+        print(n)
+    return answer
+
+# 0.00ms
+# 10.3mb
 
 print(solution(987))
-print(solution(123))
-print(solution(100))
-print(solution(10))
+# print(solution(123))
+# print(solution(100))
+# print(solution(10))

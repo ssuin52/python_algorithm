@@ -60,6 +60,9 @@ def solution1(s):
     answer = int(s)
     return answer
 
+
+# 0.04ms
+# 10.5mb
 print(solution1("23four5six7"))
 print(solution1("2three45sixseven"))
 print(solution1("one4seveneight"))
@@ -74,7 +77,10 @@ def solution2(s):
         s = s.replace(i, str(lst.index(i)))
     answer = int(s)
     return answer
-    
+
+# 0.02ms
+# 10.5mb
+#     
 print(solution2("23four5six7"))
 print(solution2("2three45sixseven"))
 print(solution2("one4seveneight"))
