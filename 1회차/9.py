@@ -27,3 +27,6 @@ def solution2(numbers):
 
 print(solution2([1,2,3,4,6,7,8,0]))
     
+def solution(numbers):
+    answer = sum(list(filter(lambda x:x not in numbers, range(0,10))))
+    return answer

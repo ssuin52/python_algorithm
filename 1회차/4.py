@@ -17,4 +17,10 @@ def solution(n):
 
 # 0.02ms
 # 10.4mb
+
+def solution(n):
+    answer = list(map(int,str(n)))
+    answer.reverse()
+    return answer
+
 print(solution(12345))
