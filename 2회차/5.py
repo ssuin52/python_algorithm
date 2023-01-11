@@ -11,8 +11,19 @@ def solution(absolutes, signs):
             answer -= absolutes[i]
     return answer
 
-# print(solution([4,7,12],[true,false,true]))
+# 0.15ms 
+# 10.3MB
 
-# abs = [4,7,2]
-# for i in abs:
-#     print(i)
+
+def solution(absolutes, signs):
+    answer = sum([absolutes[i] if signs[i] else -absolutes[i] for i in range(len(absolutes))])
+    return answer
+
+# 0.16ms
+# 10.3MB
+
+print(solution([4,7,12],[True,False,True]))
+
+
+def solution(absolutes, signs):
+    return sum([x if signs[i] else -x for i,x in enumerate(absolutes)])

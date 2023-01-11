@@ -4,4 +4,7 @@
 def solution(s):
     answer = int(s)
     return answer
+
+# 0.02ms
+# 10.4MB
     
