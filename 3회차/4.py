@@ -1,19 +1,21 @@
 # 콜라츠 추측
 # https://school.programmers.co.kr/learn/courses/30/lessons/12943
 
-def solution(num):
+def solution(n):
     count = 0
-    while num > 1:
-        if count < 500:
-            if num % 2 == 0:
-                num = num//2
-                count = count + 1
-            else:
-                num = num * 3 + 1
-                count = count + 1
-        else:
+    while n>1:
+        if count >= 500:
             return -1
+        else:
+            if n % 2 == 0:
+                n = n//2
+                count += 1
+            else:
+                n = n*3+1
+                count += 1
     return count
+print(solution(16))
+print(solution(1))
 
 '''
 num이 1이 될 때 까지 반복
@@ -30,6 +32,8 @@ num이 1이 될 때 까지 반복
     
 
 
-print(solution(16))
-print(solution(1))
+# print(solution(16))
+# print(solution(1))
+
 # while 문
+

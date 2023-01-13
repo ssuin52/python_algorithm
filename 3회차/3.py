@@ -3,15 +3,11 @@
 
 def solution(arr):
     if len(arr)==1:
-        answer = [-1]
+        return [-1]
     else:
-        a = min(arr)
-        arr.remove(a)
-        answer = arr
-    return answer
+        arr.remove(min(arr))
+        return arr
 
 print(solution([4,3,2,1]))
-
-# print(len([1,2,3]))
 
 # arr와 lst 차이

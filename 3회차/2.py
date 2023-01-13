@@ -15,3 +15,11 @@ print(solution2("01044412076"))
 
 # 슬라이싱 뒤에서부터 4개
 # replace 사용 x
+
+def solution(phone_number):
+    lst=[]
+    for i in phone_number[:-4]:
+        lst.append("*")
+    lst.append(phone_number[-4:])
+    return ''.join(lst)
+print(solution("01044412076"))

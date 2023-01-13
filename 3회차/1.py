@@ -10,12 +10,20 @@ def solution(s):
 print(solution("pPoooyY"))
 print(solution("pyY"))
 
+
+def solution(s):
+    return True if s.lower().count('p')==s.lower().count('y') else False
+
+print(solution("pPoooyY"))
+print(solution("pyY"))
+
+
 def solution2(s):
     return s.lower().count("p")==s.lower().count("y")
 
 print(solution2("pPoooyY"))
 print(solution2("pyY"))
 
-
 # lower()
 # count()
+

@@ -8,6 +8,9 @@ def solution(n):
         answer = n//2 * '수박' + '수'
     return answer
 
+def solution(n):
+    return n//2 * '수박' if n%2==0 else n//2 * '수박' + '수'
+    
 def water_melon(n):
     return "수박"*(n//2) + "수"*(n%2)
 

@@ -2,13 +2,16 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/1845
 
 def solution(nums):
-    lst = list(set(nums))
-    if len(lst) >= len(nums)//2:
+    if len(set(nums)) >= len(nums)//2:
         return len(nums)//2
     else:
-        return len(lst)
+        return len(set(nums))
 
+#(1.11ms, 11MB)
+def solution(nums):
+    return len(nums)//2 if len(set(nums))>= len(nums)//2 else len(set(nums))
 
+# 다른사람 풀이
 def solution2(ls):
     return min(len(ls)/2, len(set(ls)))
 
