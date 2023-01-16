@@ -35,5 +35,18 @@ num이 1이 될 때 까지 반복
 # print(solution(16))
 # print(solution(1))
 
-# while 문
 
+'''
+재귀함수
+재귀->가독성 굳, 변수사용 줄일수 있다, 성능면으로는 별루...
+'''
+def solution(num):
+    cnt = 0
+    return collaz(num, cnt)
+
+def collaz(num, cnt):
+    if cnt >= 500:
+        return -1
+    elif num == 1:
+        return cnt
+    return collaz(num*3+1 if num % 2 else num/2, cnt+1)
