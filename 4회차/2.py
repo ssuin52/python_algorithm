@@ -19,7 +19,6 @@ def bfs(visited, graph, node):
     while queue:
         s = queue.pop(0)
         print(s)
-        
         for neighbor in graph[s]:
             if neighbor not in visited:
                 visited.append(neighbor)

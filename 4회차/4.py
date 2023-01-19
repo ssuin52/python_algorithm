@@ -14,6 +14,7 @@ def solution(answers):
             correct[1] += 1
         if answers[i] == st3[(i%10)]:
             correct[2] += 1
+    # return correct.index(max(correct))
     for i in range(3):
         if correct[i] == max(correct):
             answer.append(i+1)

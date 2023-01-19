@@ -27,9 +27,9 @@ def solution3(sizes):
     answer = w * h
     return answer
 
-print(solution2([[60, 50], [30, 70], [60, 30], [80, 40]]))
-print(solution2([[10, 7], [12, 3], [8, 15], [14, 7], [5, 15]]))
-print(solution2([[14, 4], [19, 6], [6, 16], [18, 7], [7, 11]]))
+print(solution([[60, 50], [30, 70], [60, 30], [80, 40]]))
+print(solution([[10, 7], [12, 3], [8, 15], [14, 7], [5, 15]]))
+print(solution([[14, 4], [19, 6], [6, 16], [18, 7], [7, 11]]))
 
 # sizes = [[60, 50], [30, 70], [60, 30], [80, 40]]
 # result = [max(x) for x in sizes]
