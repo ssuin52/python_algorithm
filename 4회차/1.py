@@ -1,20 +1,36 @@
-#dfs(깊이 우선 탐색)
+#최소 직사각형
+#https://school.programmers.co.kr/learn/courses/30/lessons/86491
 
-# 그래프 표현 (예시)
-graph = {
-    'A' : ['B','C'],
-    'B' : ['D', 'E'],
-    'C' : ['F'],
-    'D' : [],
-    'E' : [],
-    'F' : []
-}
-visited = set()
-def dfs(visited, graph, node):
-    if node not in visited:
-        print(node)
-        visited.add(node)
-        for neighbor in graph[node]:
-            dfs(visited, graph, neighbor)
+def solution(sizes):
+    w = []
+    h = []
+    for x, y in sizes:
+        if x >= y:
+            w.append(x)
+            h.append(y)
+        else:
+            h.append(x)
+            w.append(y)
+    answer = max(w) * max(h)
+    return answer
 
-print(dfs(visited, graph, 'C'))
+def solution2(sizes):
+    return max(max(x) for x in sizes) * max(min(x) for x in sizes)
+
+def solution3(sizes):
+    w = 0
+    h = 0
+    for i in range(len(sizes)):
+        sizes[i].sort()
+        w = max(w, sizes[i][0])
+        h = max(h, sizes[i][1])
+    answer = w * h
+    return answer
+
+print(solution([[60, 50], [30, 70], [60, 30], [80, 40]]))
+print(solution([[10, 7], [12, 3], [8, 15], [14, 7], [5, 15]]))
+print(solution([[14, 4], [19, 6], [6, 16], [18, 7], [7, 11]]))
+
+# sizes = [[60, 50], [30, 70], [60, 30], [80, 40]]
+# result = [max(x) for x in sizes]
+# print(result)

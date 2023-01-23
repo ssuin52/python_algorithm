@@ -1,14 +1,6 @@
-import queue
+# 타겟 넘버
+# https://school.programmers.co.kr/learn/courses/30/lessons/43165
 
-queue = queue.Queue()
-
-queue.put(12)
-queue.put(52)
-queue.put(44)
-
-print(queue.get())
-print(queue.qsize())
-print(queue.get())
-print(queue.qsize())
-print(queue.get())
-print(queue.qsize())
+def solution(numbers, target):
+    answer = 0
+    return answer

@@ -1,27 +1,40 @@
-#bfs(너비 우선 탐색)
+# 모의고사
+#https://school.programmers.co.kr/learn/courses/30/lessons/42840
 
-# 그래프 표현 (예시)
-graph = {
-    'A' : ['B','C'],
-    'B' : ['D', 'E'],
-    'C' : ['F'],
-    'D' : [],
-    'E' : [],
-    'F' : []
-}
+def solution(answers):
+    st1 = [1,2,3,4,5]
+    st2 = [2,1,2,3,2,4,2,5]
+    st3 = [3,3,1,1,2,2,4,4,5,5]
+    correct = [0,0,0]
+    answer=[]
+    for i in range(len(answers)):
+        if answers[i] == st1[(i%5)]:
+            correct[0] += 1
+        if answers[i] == st2[(i%8)]:
+            correct[1] += 1
+        if answers[i] == st3[(i%10)]:
+            correct[2] += 1
+    for i in range(3):
+        if correct[i] == max(correct):
+            answer.append(i+1)
+    return answer
 
-visited = []
-queue = []
-def bfs(visited, graph, node):
-    visited.append(node)
-    queue.append(node)
+def solution(answers):
+    st1 = [1,2,3,4,5]
+    st2 = [2,1,2,3,2,4,2,5]
+    st3 = [3,3,1,1,2,2,4,4,5,5]
+    correct = [0,0,0]
+    answer=[]
+    for i in range(len(answers)):
+        if answers[i] == st1[(i%5)]:
+            correct[0] += 1
+        if answers[i] == st2[(i%8)]:
+            correct[1] += 1
+        if answers[i] == st3[(i%10)]:
+            correct[2] += 1
+    for idx, s in enumerate(correct):
+        if s == max(correct):
+            answer.append(idx+1)
+    return answer
 
-    while queue:
-        s = queue.pop(0)
-        print(s)
-        for neighbor in graph[s]:
-            if neighbor not in visited:
-                visited.append(neighbor)
-                queue.append(neighbor)
-
-bfs(visited, graph, 'A')
+print(solution([1,2,3,4,5]))
