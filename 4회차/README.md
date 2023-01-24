@@ -1,18 +1,23 @@
 # Python 프로그래머스 알고리즘 4회차
 > 목차
-> 1. dfs ([https://sizzang97.tistory.com/414](https://sizzang97.tistory.com/414))
-> 2. bfs ([https://sizzang97.tistory.com/414](https://sizzang97.tistory.com/414))
-> 3. 최소 직사각형 ([https://school.programmers.co.kr/learn/courses/30/lessons/86491](https://school.programmers.co.kr/learn/courses/30/lessons/86491))
-> 4. 모의고사([https://school.programmers.co.kr/learn/courses/30/lessons/42840](https://school.programmers.co.kr/learn/courses/30/lessons/42840))
-> 5. 소수찾기([https://school.programmers.co.kr/learn/courses/30/lessons/12921](https://school.programmers.co.kr/learn/courses/30/lessons/12921))
-> 6. 카펫([https://school.programmers.co.kr/learn/courses/30/lessons/42842](https://school.programmers.co.kr/learn/courses/30/lessons/42842))
-> 7. 타겟 넘버([https://school.programmers.co.kr/learn/courses/30/lessons/43165](https://school.programmers.co.kr/learn/courses/30/lessons/43165))
+> dfs ([https://sizzang97.tistory.com/414](https://sizzang97.tistory.com/414))
+> bfs ([https://sizzang97.tistory.com/414](https://sizzang97.tistory.com/414))
+> 1. 최소 직사각형 ([https://school.programmers.co.kr/learn/courses/30/lessons/86491](https://school.programmers.co.kr/learn/courses/30/lessons/86491))
+> 2. 모의고사([https://school.programmers.co.kr/learn/courses/30/lessons/42840](https://school.programmers.co.kr/learn/courses/30/lessons/42840))
+> 3. 소수찾기([https://school.programmers.co.kr/learn/courses/30/lessons/12921](https://school.programmers.co.kr/learn/courses/30/lessons/12921))
+> 4. 카펫([https://school.programmers.co.kr/learn/courses/30/lessons/42842](https://school.programmers.co.kr/learn/courses/30/lessons/42842))
+> 5. 피로도([https://school.programmers.co.kr/learn/courses/30/lessons/87946](https://school.programmers.co.kr/learn/courses/30/lessons/87946))
+> 6. 전력망을 둘로 나누기 ([https://school.programmers.co.kr/learn/courses/30/lessons/86971](https://school.programmers.co.kr/learn/courses/30/lessons/86971))
+> 7. 모음사전 ([https://school.programmers.co.kr/learn/courses/30/lessons/84512](https://school.programmers.co.kr/learn/courses/30/lessons/84512))
 > 8. 게임 맵 최단거리 ([https://school.programmers.co.kr/learn/courses/30/lessons/1844](https://school.programmers.co.kr/learn/courses/30/lessons/1844))
+> 8. 프린터 ([https://school.programmers.co.kr/learn/courses/30/lessons/42587](https://school.programmers.co.kr/learn/courses/30/lessons/42587))
+> 10. 타겟 넘버([https://school.programmers.co.kr/learn/courses/30/lessons/43165](https://school.programmers.co.kr/learn/courses/30/lessons/43165))
+
 
 
 <br>
 
-## 1. dfs(깊이 우선 탐색)
+## dfs(깊이 우선 탐색)
 
 재귀로 구현
    
@@ -20,14 +25,14 @@
 
 <br>
 
-## 2. bfs(너비 우선 탐색)
+## bfs(너비 우선 탐색)
 
 queue로 구현
 
 
 <br>
 
-## 3. 최소 직사각형
+## 1. 최소 직사각형
 solution1 for문 사용(1.48ms, 11.6MB)
 
 ```sh
@@ -68,7 +73,7 @@ sort로 정렬하여 index 0번째 값을 w에, 1번째 값을 h에 담았다.
 
 <br>
 
-## 4. 모의고사
+## 2. 모의고사
 
 solution1 for문 사용(2.36ms, 10.4MB)
 
@@ -95,7 +100,7 @@ correct.index(max(correct))+1로 최댓값의 인덱스에 1를 더해서
 
 <br>
 
-## 5. 소수찾기
+## 3. 소수찾기
 
 solution 이중 for문
 정확성 테스트(2989.78ms, 10.4MB)
@@ -138,7 +143,7 @@ len(num)을 return 한다
 
 <br>
 
-## 6. 카펫
+## 4. 카펫
 
 ```sh
 yellow의 가로를 x, 세로를 y라고 하면
@@ -164,8 +169,19 @@ x+2, y+2를 answer에 append해서 return 하자
 
 <br>
 
-## 7. 타겟 넘버
+## 5. 피로도
 
+```sh
+1. 던전을 순서를 고려하여 나열한 경우의 수를 구하자.
+-> 순열 이용
+2. 각각의 경우의 수에 참여할 수 있는 던전의 수를 리스트에 담아주자
+3. 리스트에서 최댓값을 반환하자
+
+순서를 고려하지 않고 작성했다가 오류
+
+순열을 이용하여 가능한 순서의 경우의수를 고려하여 다시 작성
+
+```
 1. 
    * 
 
