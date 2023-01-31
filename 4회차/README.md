@@ -9,9 +9,7 @@
 > 5. 피로도([https://school.programmers.co.kr/learn/courses/30/lessons/87946](https://school.programmers.co.kr/learn/courses/30/lessons/87946))
 > 6. 전력망을 둘로 나누기 ([https://school.programmers.co.kr/learn/courses/30/lessons/86971](https://school.programmers.co.kr/learn/courses/30/lessons/86971))
 > 7. 모음사전 ([https://school.programmers.co.kr/learn/courses/30/lessons/84512](https://school.programmers.co.kr/learn/courses/30/lessons/84512))
-> 8. 게임 맵 최단거리 ([https://school.programmers.co.kr/learn/courses/30/lessons/1844](https://school.programmers.co.kr/learn/courses/30/lessons/1844))
 > 8. 프린터 ([https://school.programmers.co.kr/learn/courses/30/lessons/42587](https://school.programmers.co.kr/learn/courses/30/lessons/42587))
-> 10. 타겟 넘버([https://school.programmers.co.kr/learn/courses/30/lessons/43165](https://school.programmers.co.kr/learn/courses/30/lessons/43165))
 
 
 
@@ -211,5 +209,3 @@ index를 구해주는데 반환할 때는 +1를 더해주자.
 ```
 
 <br>
-
-## 8. 게임 맵 최단거리
