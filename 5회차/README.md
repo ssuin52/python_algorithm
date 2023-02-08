@@ -1,4 +1,4 @@
-# Python 프로그래머스/백준 알고리즘 4회차
+# Python 프로그래머스 5회차
 > 목차
 > 1. 타겟 넘버([https://school.programmers.co.kr/learn/courses/30/lessons/43165](https://school.programmers.co.kr/learn/courses/30/lessons/43165))
 > 2. 게임 맵 최단거리 ([https://school.programmers.co.kr/learn/courses/30/lessons/1844](https://school.programmers.co.kr/learn/courses/30/lessons/1844))
