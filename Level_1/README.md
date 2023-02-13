@@ -1,7 +1,8 @@
 # Python 프로그래머스 Level_1
 > 목차
 > 1. 2016년([https://school.programmers.co.kr/learn/courses/30/lessons/12901](https://school.programmers.co.kr/learn/courses/30/lessons/12901))
-
+> 2. 나누어 떨어지는 숫자 배열([https://school.programmers.co.kr/learn/courses/30/lessons/12910](https://school.programmers.co.kr/learn/courses/30/lessons/12910))
+> 3. 문자열 내 마음대로 정하기([https://school.programmers.co.kr/learn/courses/30/lessons/12915](https://school.programmers.co.kr/learn/courses/30/lessons/12915))
 
 
 
@@ -38,3 +39,27 @@
 
 <br>
 
+## 2. 나누어 떨어지는 숫자 배열
+arr를 for 문 돌려서 나누어 떨어지는 수를 리스트에 담아서 리턴하기전에 정렬해주자
+answer의 원소가 없다면 -1를 return 하자
+
+```sh
+1. 배열을 for문을 돌리며 divisor로 나누어 떨어지는지 확인하고 나누어 떨어진다면 answer에 담아주기
+# answer=[]
+# for i in arr:
+#     if i % divisor == 0:
+#         answer.append(i)
+
+2. return 전에 정렬해주기
+# answer.sort()
+
+3. answer의 개수가 0이라면 -1를 담아 return 하기
+# if len(answer)==0:
+#     answer.append(-1)
+# return answer
+
+```
+
+<br>
+
+## 3. 
