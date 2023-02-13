@@ -11,7 +11,7 @@ def solution(arr, divisor):
         answer.append(-1)
     return answer
 
-
+# 간단하게 정리하기
 def solution(arr, divisor):
     answer = [i for i in arr if i % divisor == 0]
     answer.sort()
