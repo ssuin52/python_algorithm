@@ -62,4 +62,24 @@ answer의 원소가 없다면 -1를 return 하자
 
 <br>
 
-## 3. 
+## 3. 문자열 내 마음대로 정하기
+
+strings의 각각의 단어의 index n번째에 위치한 알파벳을 각각의 맨 앞에 붙여주고 정렬을 하자.
+그리고 return할 때 두번째 알파벳부터 return해주자
+
+```sh
+1. for문으로 strings의 각각의 단어 맨 앞에 index n번째에 위치한 알파벳을 붙여서 담아주자
+    # for i in strings:
+    #     i = i[n]+i
+    #     lst.append(i)
+
+2. 정렬
+    #lst.sort()
+
+3. 슬라이싱을 해서 return 해주자
+    # for j in lst:
+    #     j = j[1:]
+    #     answer.append(j)
+    # return answer
+
+```
