@@ -4,7 +4,7 @@
 > 2. 나누어 떨어지는 숫자 배열([https://school.programmers.co.kr/learn/courses/30/lessons/12910](https://school.programmers.co.kr/learn/courses/30/lessons/12910))
 > 3. 문자열 내 마음대로 정하기([https://school.programmers.co.kr/learn/courses/30/lessons/12915](https://school.programmers.co.kr/learn/courses/30/lessons/12915))
 > 4. 신규 아이디 추천([https://school.programmers.co.kr/learn/courses/30/lessons/72410](https://school.programmers.co.kr/learn/courses/30/lessons/72410))
-
+> 5. 키패드 누르기([https://school.programmers.co.kr/learn/courses/30/lessons/67256](https://school.programmers.co.kr/learn/courses/30/lessons/67256))
 
 <br>
 
@@ -154,3 +154,69 @@ if len(answer) > 15:
 while len(answer) < 3:
     answer += answer[-1]  
 ```
+
+
+<br>
+
+## 5. 키패드 누르기
+
+1,4,7은 L(왼손), 3,6,9는 R(오른손), 
+2,5,8,0은 더 가까이 있는 손(위치가 같을 경우에는 hand인 손)
+<br>
+1,4,7은 왼손에 3,6,9는 오른손에 담고 나머지 숫자를 처리하기 위해 왼쪽손의 위치와 오른쪽 손의 위치를 저장하기위해 stack에 따로 담아주고 
+pop으로 비교해주려고 했는데 비교를 못하겠어서...ㅠㅠ 아이디어가 생각이 나질 않았다.
+<br>
+거리 비교를 어떻게 하나 봤더니 좌표를 이용할 수 있더라. 해보자
+
+```sh
+1. 키패드를 좌표로 위치를 정하자
+    # pad = {'1':(0,0), '2':(0,1), '3':(0,2),
+    #        '4':(1,0), '5':(1,1), '6':(1,2),
+    #        '7':(2,0), '8':(2,1), '9':(2,2),
+    #        '*':(3,0), '0':(3,1), '#':(3,2)
+    #     }
+
+2. 처음 왼손,오른손 위치를 정해주자
+    # left_pad = pad['*']   #처음 왼손의 위치
+    # right_pad = pad['#']  #처음 오른손의 위치
+
+3. for문으로 입력값을 돌면서 각각의 경우에 맞게 answer를 추가하자
+
+    3-1. 무조건 왼손으로 입력해야 하는 경우 (1, 4, 7)
+        if number in [1,4,7]:
+            answer += 'L' # L을 추가하고 
+            left_pad = pad[str(number)] # 왼손 위치를 업데이트 해주자
+
+    3-2. 무조건 오른손으로 입력해야 하는 경우 (3, 6, 9)
+        elif number in [3,6,9]: 
+            answer += 'R' # R을 추가하고
+            right_pad = pad[str(number)] # 오른손 위치를 업데이트 해주자
+
+    3-3. (2, 5, 8, 0)인 경우 거리를 계산하여 비교해주자
+        else:
+            # 1. 거리 제곱의 합 이용
+            left_d = math.ceil(math.sqrt(math.pow((pad[str(number)][0]-left_pad[0]),2)+math.pow((pad[str(number)][1]-left_pad[1]),2))))
+            right_d = math.ceil(math.sqrt(math.pow((pad[str(number)][0]-right_pad[0]),2)+math.pow((pad[str(number)][1]-right_pad[1]),2))))
+
+            # 2. 절댓값 이용
+            left_d = abs(left_pad[0] - pad[str(number)][0]) + abs(left_pad[1] - pad[str(number)][1])
+            right_d = abs(right_pad[0] - pad[str(number)][0]) + abs(right_pad[1] - pad[str(number)][1])
+
+            3-3-1. 거리비교 했을 시 처리(같을 경우 hand 선택)
+                if left_d < right_d:
+                    answer += 'L'
+                    left_pad = pad[str(number)]
+                elif left_d > right_d:
+                    answer += 'R'
+                    right_pad = pad[str(number)]
+                else:
+                    if hand == 'left':
+                        answer += 'L'
+                        left_pad = pad[str(number)]
+                    else:
+                        answer += 'R'
+                        right_pad = pad[str(number)]
+
+```
+3-3에서 거리제곱의 합을 이용하여 구할 때 math.ceil(올림)을 안할 경우 일부 오류
+왜?????????????
