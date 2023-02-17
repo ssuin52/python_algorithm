@@ -9,7 +9,7 @@ def solution(new_id):
     
     # 2단계
     for i in new_id:
-        if i.isalpha() or i.isdigit() or i == '-' or i =='_' or i == '.':
+        if i.isalpha() or i.isdigit() or i in ['-','_','.']:
             answer += i
     
     # 3단계
