@@ -6,6 +6,7 @@
 > 4. 신규 아이디 추천([https://school.programmers.co.kr/learn/courses/30/lessons/72410](https://school.programmers.co.kr/learn/courses/30/lessons/72410))
 > 5. 키패드 누르기([https://school.programmers.co.kr/learn/courses/30/lessons/67256](https://school.programmers.co.kr/learn/courses/30/lessons/67256))
 > 6. 크레인 인형뽑기 게임([https://school.programmers.co.kr/learn/courses/30/lessons/64061](https://school.programmers.co.kr/learn/courses/30/lessons/64061))
+> 7. 로또의 최고 순위와 최저 순위([https://school.programmers.co.kr/learn/courses/30/lessons/77484](https://school.programmers.co.kr/learn/courses/30/lessons/77484))
 
 <br>
 
@@ -260,4 +261,25 @@ for i in moves:
                     stack.pop()
                     answer += 2 # pop해줬으면 2개가 빠지므로 2씩 더해준다
             break # break문으로 나가주기
+```
+
+## 7. 로또의 최고 순위와 최저 순위
+1. 0을 제외한 수 중에서 win_nums와 일치한 수를 세어주자 -> 가장 낮은 등수
+2. 0이 전부 맞을 경우 -> 가장 높은 등수
+
+### 1. for문을 돌려주며 win_nums과 일치하는 수와 0의 수를 세어서 따로 담아주자
+```sh
+corr_count = 0    # win_nums과 일치하는 수
+zero_count = 0    # 0의 개수
+for i in range(len(lottos)):
+    if lottos[i] in win_nums:
+        corr_count += 1
+    if lottos[i] == 0:
+        zero_count += 1
+```
+### 2. 가장 높은 등수는 0이 모두 정답일 경우이고, 가장 낮은 등수는 0이 모두 오답일 경우이므로 rank 딕셔너리로 등수를 담아주자
+```sh
+rank = {0:6, 1:6, 2:5, 3:4, 4:3, 5:2, 6:1}
+max_count = zero_count + corr_count
+answer = [rank[max_count],rank[corr_count]]
 ```
