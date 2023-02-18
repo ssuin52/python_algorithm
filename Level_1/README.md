@@ -100,6 +100,11 @@ for i in new_id:
     if i.islower() or i.isdigit() or i == '-' or i =='_' or i == '.':
         answer += i
 ```
+```sh
+정규식을 사용할 수도 있다!
+answer = re.sub('[^a-z0-9\-_.]', '', answer)
+```
+
 ### 3단계 new_id에서 마침표(.)가 2번 이상 연속된 부분을 하나의 마침표(.)로 치환합니다.
 ```sh
 3단계 마침표가 2번 이상 연속된 부분을 하나의 마침표로 바꿀 때 

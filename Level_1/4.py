@@ -15,6 +15,7 @@ def solution(new_id):
     # 3단계
     while '..' in answer:
         answer = answer.replace('..', '.')
+    # 정규식을 써보자~!
     
     # 4단계
     if answer[0]=='.':
