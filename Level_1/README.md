@@ -5,6 +5,7 @@
 > 3. 문자열 내 마음대로 정하기([https://school.programmers.co.kr/learn/courses/30/lessons/12915](https://school.programmers.co.kr/learn/courses/30/lessons/12915))
 > 4. 신규 아이디 추천([https://school.programmers.co.kr/learn/courses/30/lessons/72410](https://school.programmers.co.kr/learn/courses/30/lessons/72410))
 > 5. 키패드 누르기([https://school.programmers.co.kr/learn/courses/30/lessons/67256](https://school.programmers.co.kr/learn/courses/30/lessons/67256))
+> 6. 크레인 인형뽑기 게임([https://school.programmers.co.kr/learn/courses/30/lessons/64061](https://school.programmers.co.kr/learn/courses/30/lessons/64061))
 
 <br>
 
@@ -238,4 +239,25 @@ pop으로 비교해주려고 했는데 비교를 못하겠어서...ㅠㅠ 아이
 <br>
 3-3에서 거리제곱의 합을 이용하여 구할 때 math.ceil(올림)을 안할 경우 일부 오류
 <br>
-왜?????????????
+
+## 6. 크레인 인형뽑기 게임
+
+보자마자 스택으로 풀어야지!
+
+### 1. 2중 for문으로 board의 moves 해당 열을 돌면서 0이 아니면 stack에 담아주자 
+```sh
+for i in moves:
+    for j in range(len(board)):
+        if board[j][i-1] != 0:
+            stack.append(board[j][i-1])
+            board[j][i-1] = 0 # 스택에 담아주고 0으로 바꿔주기
+```
+### 2. stack에 담아줬을 떄 stack의 숫자가 1보다 크면 가장 최근 2개의 값의 일치여부를 확인하고 일치하다면 2번 pop 해준다
+```sh
+            if len(stack) > 1:
+                if stack[-1] == stack[-2]:
+                    stack.pop()
+                    stack.pop()
+                    answer += 2 # pop해줬으면 2개가 빠지므로 2씩 더해준다
+            break # break문으로 나가주기
+```
